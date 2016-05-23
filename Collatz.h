@@ -9,7 +9,8 @@ class Collatz {
         Collatz(int number);
         int run();
         int run(int stop_at);
-        bool step();
+        void step();
+        bool terminated();
         std::vector<int> get_sequence();
 };
 
