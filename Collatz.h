@@ -1,18 +1,16 @@
 #ifndef __COLLATZ_H__
 #define __COLLATZ_H__
-
+#include <vector>
 class Collatz {
     private:
-        int n;
-        int steps;
-        void get_next();
-        
+        std::vector<int> sequence;
 
     public:
         Collatz(int number);
         int run();
         int run(int stop_at);
-        void reset_count();
+        bool step();
+        std::vector<int> get_sequence();
 };
 
 #endif
